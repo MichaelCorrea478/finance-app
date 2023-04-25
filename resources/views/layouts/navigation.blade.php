@@ -30,6 +30,24 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route('transactions.index') }}" class="nav-link">
+                    <i class="nav-icon fa-solid fa-scale-balanced"></i>
+                    <p>
+                        Transações
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('categories.index') }}" class="nav-link">
+                    <i class="nav-icon fa-regular fa-bookmark"></i>
+                    <p>
+                        Categorias
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TransactionController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +31,12 @@ Route::middleware('auth')->group(function () {
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+
+    Route::prefix('/transactions')->group(function () {
+        Route::get('/index', [TransactionController::class, 'index'])->name('transactions.index');
+    });
+
+    Route::prefix('/categories')->group(function () {
+        Route::get('/index', [CategoryController::class, 'index'])->name('categories.index');
+    });
 });

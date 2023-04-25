@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->string('description');
+            $table->decimal('value', 10, 2)->nullable();
+            $table->boolean('due_date')->default(false);
+            $table->boolean('is_paid')->default(false);
+            $table->boolean('monthly')->default(false);
+            $table->boolean('fixed_value')->default(false);
             $table->timestamps();
         });
     }

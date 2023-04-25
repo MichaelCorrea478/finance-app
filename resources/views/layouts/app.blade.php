@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+    @vite(['public/css/bootstrap.min.css', 'public/js/bootstrap.min.js'])
     @yield('styles')
 </head>
 <body class="hold-transition sidebar-mini">
