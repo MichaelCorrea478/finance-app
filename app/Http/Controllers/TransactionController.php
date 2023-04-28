@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTransactionRequest;
 use App\Http\Requests\UpdateTransactionRequest;
+use App\Models\Category;
 use App\Models\Transaction;
 
 class TransactionController extends Controller
@@ -13,7 +14,10 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        //
+        return view('transaction.index', [
+            'transactions' => Transaction::all(),
+            'categories' => Category::all()
+        ]);
     }
 
     /**
